@@ -1,13 +1,16 @@
 import streamlit as st
+import math as mt
 
-st.title("Retangulo ST")
+TITULO = "Cálculo de Área, Perímetro e Diagonal de um Retângulo"
+st.title(TITULO)
 
-altura = st.number_input("Digite a altura do retangulo (em metros): ")
-base = st.number_input("Digite a base do retangulo (em metros): ")
+altura = st.number_input("Digite a altura do retangulo (em metros):", min_value=0.0)
+base = st.number_input("Digite a base do retangulo (em metros):", min_value=0.0)
 
 area = altura * base
 perimetro = 2 * altura + 2 * base
-diagonal = (altura**2 + base**2) ** 0.5
+x = mt.pow(base, 2) + mt.pow(altura, 2)
+diagonal = mt.sqrt(x)
 
 st.write(f"A área do retângulo é {area:.2f} m²")
 st.write(f"O perímetro do retângulo é {perimetro:.2f} m")

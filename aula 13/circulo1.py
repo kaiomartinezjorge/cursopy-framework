@@ -1,14 +1,12 @@
-import calculadora as c
-
-circulo = c.calculadora()
+from calculadora import calculadora1
 
 raio = float(input("Digite o valor do raio: "))
 
-circunferencia = circulo.circunferencia(raio)
-area = circulo.area(raio)
+circunferencia = calculadora1.circunferencia(raio)
+area = calculadora1.area(raio)
 
-print(f"""
-    Circunferencia = {circunferencia:.2f}
-    Area = {area:.2f}
-    PI = {circulo.PI:.2f}
+print("""
+    Circunferencia: {circunferencia:.2f}
+    Area: {area:.2f}
+    PI: {PI}
 """)

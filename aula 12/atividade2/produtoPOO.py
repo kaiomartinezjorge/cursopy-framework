@@ -3,6 +3,14 @@ class Produto:
     preco:float
     quantidade:int
     saida:str
+
+    # construtores
+    def __init__(self, nome:str = "", preco:float = 0.0, quantidade:int = 0):
+        self.nome = nome
+        self.preco = preco
+        self.quantidade = quantidade
+
+
     #metodos
     def valortotalemestoque(self) -> float:
         return self.preco * self.quantidade

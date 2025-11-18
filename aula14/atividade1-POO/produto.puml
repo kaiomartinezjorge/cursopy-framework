@@ -1,0 +1,9 @@
+@startuml produto
+
+class pessoas{
+    +nome:str
+    +idade:int
+    +pessoavelha(outra_idade:int):bool
+
+}
+@enduml

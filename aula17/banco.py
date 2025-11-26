@@ -8,11 +8,7 @@ class Conta(ABC):
     def _numero(self) -> str:
         return self.__numero
     @_numero.setter
-    def _numero(self, numero:str) -> str:
-        if numero == "" or numero == None:
-            raise ValueError("Valor invalido")
-        else:
-            self.__numero = numero
+
     @property
     def _saldo(self) -> float:
         return self.__saldo
@@ -76,6 +72,7 @@ class ContaParaEmpresa(Conta):
     def solicitarCredito(self, valor:float) -> float:
         self._limite -= valor
         self._saldo  += valor
+        
 
 #--Fim classes----
 

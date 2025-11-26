@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+class Pessoas {
+    + nome
+    + renda
+}
+
+class PessoaFisica {
+    + gastosaude
+    + jurosfisica()
+    + dadosfisica()
+}
+
+class PessoaJuridica {
+    + numfuncionarios
+    + jurosjuridica()
+    + dadosjuridica()
+}
+
+Pessoas <-- PessoaFisica
+Pessoas <-- PessoaJuridica
+
+@enduml

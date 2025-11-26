@@ -39,7 +39,7 @@ class PessoaFisica(Pessoas):
     def gastosaude(self, gastosaude: float):
         if gastosaude < 0:
             raise ValueError("Valor inválido")
-        self.__gastosaude = gastosaude * 0.5
+        self.__gastosaude = gastosaude
 
     def __init__(self, nome: str, renda: float, gastosaude: float):
         super().__init__(nome, renda)
@@ -58,7 +58,7 @@ class PessoaFisica(Pessoas):
     Nome: {self.nome}
     Renda: {self.renda}
     gasto com saude: {self.gastosaude}
-    Imposto a pagar: {self.jurosfisica() + gastosaude}
+    Imposto a pagar: {self.jurosfisica() + gastosaude * 0.5 }
     '''
         return saida
 
